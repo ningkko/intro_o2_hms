@@ -21,7 +21,7 @@ Passcode or option (1-3):
 
 ## Running jobs in the interactive mode
 After passing the duo authentification, you should see your home page.\
-```[username@login03 ~]$ ```\
+```[username@login03 ~]$ ```
 
 Usually we have three things to do:
 #### 1. cd to your group folder
