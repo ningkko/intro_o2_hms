@@ -26,7 +26,8 @@ After passing the duo authentification, you should see your home page.\
 Usually we have three things to do:
 ### 1. cd to your group folder
 cd to your folder in your group folder. The path is usually long. So I suggest setting up an alias\
-```alias home="cd /your_group_folder_absolute_path/your_username/"```\
+```alias home="cd /your_group_folder_absolute_path/your_username/"```
+
 Now enter ```home```, you should be directed to your folder.
 
 ### 2. Switching to a computing node
@@ -38,14 +39,17 @@ After running it you should see
  ```srun: job 14941530 queued and waiting for resources
     srun: job 14941530 has been allocated resources
 ```
-This should change your node from "login#" to something like "compute-a-16-165 your_username".\
+This should change your node from "login#" to something like "compute-a-16-165 your_username".
+
 To quit the computing node (e.g. when you want to request more memory or time), enter ```quit```.
 
 ### 3. Activating a conda environment 
 On O2 if you want to install packages, you have to create a virtual environment (venv), and install packages under the venv.\
-If you have never heard of a virtual environment, just interpret it as a place to store all your packages for a project.  Most of the time you should create one venv for one project.\
+If you have never heard of a virtual environment, just interpret it as a place to store all your packages for a project.  Most of the time you should create one venv for one project.
+
 To create a venv using conda:\
-```conda create -n venv_name```\
+```conda create -n venv_name```
+
 After hitting enter you should see the following lines:
 ```Collecting package metadata (current_repodata.json): done
 Solving environment: done
