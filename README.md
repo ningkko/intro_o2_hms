@@ -24,15 +24,15 @@ After passing the duo authentification, you should see your home page.\
 ```[username@login03 ~]$ ```\
 
 Usually we have three things to do:
-### 1. cd to your group folder
+#### 1. cd to your group folder
 cd to your folder in your group folder. The path is usually long. So I suggest setting up an alias\
 ```alias home="cd /your_group_folder_absolute_path/your_username/"```\
 Now enter ```home```, you should be directed to your folder.
 
-## 2. Switch to a computing node
+#### 2. Switching to a computing node
 Switch to a computing node, so you can run memory-intensive jobs in the interactive mode.
-The following line asks for an interactive job for 30G memory and 12 hrs duration (O2 requires its user to run no more than two interactive nodes at the same time, And the time limit for interactive nodes is 12 hrs). 
-```srun --pty -p interactive --mem 30G -t 0-12:00 /bin/bash```
+The following line asks for an interactive job for 30G memory and 12 hrs duration (O2 requires its user to run no more than two interactive nodes at the same time, And the time limit for interactive nodes is 12 hrs). \
+```srun --pty -p interactive --mem 30G -t 0-12:00 /bin/bash```\
 After running it you should see
  ```srun: job 14941530 queued and waiting for resources
     srun: job 14941530 has been allocated resources
@@ -40,11 +40,11 @@ After running it you should see
 This should change your node from "login#" to something like "compute-a-16-165 your_username".\
 To quit the computing node (e.g. when you want to request more memory or time), enter ```quit```.
 
-## 3. Activate a conda environment 
+##### 3. Activating a conda environment 
 On O2 if you want to install packages, you have to create a virtual environment (venv), and install packages under the venv.\
 If you have never heard of a virtual environment, just interpret it as a place to store all your packages for a project.  Most of the time you should create one venv for one project.\
-To create a venv using conda:
-```conda create -n venv_name```
+To create a venv using conda:\
+```conda create -n venv_name```\
 After hitting enter you should see the following lines:
 ```Collecting package metadata (current_repodata.json): done
 Solving environment: done
@@ -83,14 +83,11 @@ Executing transaction: done
 ```
 As it suggests, ```conda activate venv_name``` activates the venv, whereas ```conda deactivate``` deactivates it.
 
-## Installing packages 
+#### Installing packages 
 You should use conda to install packages, different packages have different ways to install. Look them up on Google.
 
-## Calling python
+#### Calling python
 Same as in your local shell: ```python test.py```
-
-## Using GUI (graphic user interface) to view your folders
-I use CyberDuck: https://cyberduck.io/.
 
 ## Running jobs in a non-interactive mode
 (For detailed, official documentation, visit: https://wiki.rc.hms.harvard.edu/display/O2/Using+Slurm+Basic).
@@ -113,8 +110,11 @@ To do this, we have to write a script. A typical script looks like the following
 python test.py                             # Your command to run. E.g. when running a shell script, you should put sh test.sh                                                 
 ```
 
-### Something to note
+#### Something to note
 1. All paths in the script must be absolute paths. If you didn't use the absolute path then for sure you won't find your result. And they'll probably get stored to someone else's directory.
 2. Test your script on a small amount of data and a small memory request before getting on the actual giant data. Queueing for resources takes time.
 3. When dealing with large amounts of data, request at least 20G to make sure your processes don't get killed at near the end.
 4. When running time-consuming tasks, keep a log, or track your task piecewise. So when your program halts at some point after running for two days, you don't need to rerun all.
+
+## Using GUI (graphic user interface) to view your folders
+I use CyberDuck: https://cyberduck.io/.
