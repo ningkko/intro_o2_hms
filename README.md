@@ -30,9 +30,8 @@ cd to your folder in your group folder. The path is usually long. So I suggest s
 
 Now enter ```home```, you should be directed to your folder. But the alias gets cleaned when you log out. So it's better to create a bash script in your root folder and run it every time you log in.
 
-To create a bash script:
-```touch alias.sh``` \
-```nano alias.sh```
+To create a bash script: ```touch alias.sh``` \
+To edit it: ```nano alias.sh```
 
 The bash file should look like
 ```
