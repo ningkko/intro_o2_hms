@@ -28,7 +28,7 @@ Usually we have three things to do:
 cd to your folder in your group folder. The path is usually long. So I suggest setting up an alias\
 ```alias home="cd /your_group_folder_absolute_path/your_username/"```
 
-Now enter ```home```, you should be directed to your folder.
+Now enter ```home```, you should be directed to your folder. But the alias gets cleaned when you log out. You have to create it every time you login.
 
 ### 2. Switching to a computing node
 Switch to a computing node, so you can run memory-intensive jobs in the interactive mode.
