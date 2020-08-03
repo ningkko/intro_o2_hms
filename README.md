@@ -28,7 +28,22 @@ Usually we have three things to do:
 cd to your folder in your group folder. The path is usually long. So I suggest setting up an alias\
 ```alias home="cd /your_group_folder_absolute_path/your_username/"```
 
-Now enter ```home```, you should be directed to your folder. But the alias gets cleaned when you log out. You have to create it every time you login.
+Now enter ```home```, you should be directed to your folder. But the alias gets cleaned when you log out. So it's better to create a bash script in your root folder and run it every time you log in.
+
+To create a bash script:
+```touch alias.sh``` \
+```nano alias.sh```
+
+The bash file should look like
+```
+#!/bin/bash
+alias alias_name1="cd corresponding_path"
+alias alias_name2="cd corresponding_path"
+...
+echo "Alias set." 
+```
+
+Now run the bash script with ```sh alias.sh```, you should see an 'Alias set' statement printed out in the shell. And entering any of the aliases you set, it should bring you to the corresponding directory.
 
 ### 2. Switching to a computing node
 Switch to a computing node, so you can run memory-intensive jobs in the interactive mode.
@@ -98,7 +113,7 @@ Same as in your local shell: ```python test.py```
 (For detailed, official documentation, visit: https://wiki.rc.hms.harvard.edu/display/O2/Using+Slurm+Basic).
 
 Jobs running under the interactive mode pauses when your laptop enters the sleeping mode. Also sleeping mode usually breaks the pipeline (halts the connection to the server). So when you have a long task to run, you should use the ```sbatch``` command to submit a job to the cloud.\
-To do this, we have to write a script. A typical script looks like the following:
+To do this, we have to write a bash script. A typical script looks like the following:
 ```#!/bin/bash
 #SBATCH -c 4                               # Request four cores
 #SBATCH -N 1                               # Request one node (if you request more than one core with -c, also using
