@@ -28,21 +28,7 @@ Usually we have three things to do:
 cd to your folder in your group folder. The path is usually long. So I suggest setting up an alias\
 ```alias home="cd /your_group_folder_absolute_path/your_username/"```
 
-Now enter ```home```, you should be directed to your folder. But the alias gets cleaned when you log out. So it's better to create a bash script in your root folder and run it every time you log in.
-
-To create a bash script: ```touch alias.sh``` \
-To edit it: ```nano alias.sh```
-
-The bash file should look like
-```
-#!/bin/bash
-alias alias_name1="cd corresponding_path"
-alias alias_name2="cd corresponding_path"
-...
-echo "Alias set." 
-```
-
-Now run the bash script with ```sh alias.sh```, you should see an 'Alias set' statement printed out in the shell. And entering any of the aliases you set, it should bring you to the corresponding directory.
+Now enter ```home```, you should be directed to your folder. But the alias gets cleaned when you log out. You could write the aliases in your .bash_profile or simply reset them evey time you log in.
 
 ### 2. Switching to a computing node
 Switch to a computing node, so you can run memory-intensive jobs in the interactive mode.
