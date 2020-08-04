@@ -125,12 +125,12 @@ python test.py                             # Your command to run. E.g. when runn
 I use CyberDuck: https://cyberduck.io/.
 ### Login on CyberDuck
 1. Click on the Open Connection button, it will pop up a window asking for your username and password.\
-<img src="img/1.png" width="500">
+<img src="img/1.png" width="250">
 2. Click on the first bar and choose the SSH Protocol\
-<img src="img/2.png" width="500">
+<img src="img/2.png" width="400">
 3. Enter your information and hit connect. This should give you send you a push on DUO.\
-<img src="img/3.png" width="500">
+<img src="img/3.png" width="400">
 
 You should now see your home/user_name folder. To go to the group folder, click on the directory bar and select / to go to the root folder. Follow your group folder path to go to your group folder.\
-<img src="img/4.png" width="500">
+<img src="img/4.png" width="300">
 
