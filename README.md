@@ -47,6 +47,13 @@ To quit the computing node (e.g. when you want to request more memory or time), 
 On O2 if you want to install packages, you have to create a virtual environment (venv), and install packages under the venv.\
 If you have never heard of a virtual environment, just interpret it as a place to store all your packages for a project.  Most of the time you should create one venv for one project.
 
+If it's the first time you use conda on o2, you have to load it and configure it first.\
+To load conda, run ```module load conda```\
+If it did not work, try specifying the conda version. E.g. ```module load conda2/4.2.13```
+
+After loading it, configure it with ```conda init bash```. If you are using a shell other than bash, put your shell name instead of bash.\
+There should be somewhere to configure bash so you don't need to call ```module load conda``` every time you log in, but I forgot how to do it.
+
 To create a venv using conda:\
 ```conda create -n venv_name```
 
